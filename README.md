@@ -1,5 +1,4 @@
-# DASS-Assignment-1
-This is the ReadME file for DASS Assignment-1 Submission.
+# This is the ReadME file Greddit Web Application
 
 The react app (frontend) can be run by executing the command 'npm start' in the frontend folder's terminal
 The backend can be started by executing the command 'npm run dev' in the backend folder's terminal.
