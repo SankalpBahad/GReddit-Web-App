@@ -1,40 +1,52 @@
-# This is the ReadME file Greddit Web Application
+# Greddit Web Application
+## Introduction
+Greddit is a web application that allows users to create and participate in various sub-greddiits (forums) where they can post content, comment, upvote, and downvote posts. The application is built using React for the frontend and Node.js for the backend, with MongoDB Atlas as the online database for storing data.
+## Prerequisites
+Before running the application, ensure that you have the following installed:
+  
+  Node.js
+  
+  npm (Node Package Manager)
 
-The react app (frontend) can be run by executing the command 'npm start' in the frontend folder's terminal
-The backend can be started by executing the command 'npm run dev' in the backend folder's terminal.
+## Getting Started
+Follow these steps to run the Greddit Web Application:
 
-The online mongoDB site used to store data in databases (collections) is 'mongoDB atlas'
-The connection string for connecting (i.e url) is present in the .env file in backend folder (/backend/.env) and is commented.
+Clone the repository or download the source code.
+Open two separate terminal windows/tabs.
 
-When the react app is first opened,  it by default takes to the Login Page, where there are options for Signing Up as well. 
-There is an alert in case of invalid credentials.
+### Frontend
 
-On register page, username, first and last name and email and password are required fields.
+Navigate to the frontend folder: cd frontend
+Install the dependencies: npm install
+Start the React app: npm start
+The React app will open in your default browser at http://localhost:3000.
 
-Then the home page is displayed that has the links to all the required locations and also has logout button at top right.
+### Backend
 
-In My sub greddiits there is an option to add a new form in the top left corner. It displays the Subgreddiits created and handled by the user.
+Navigate to the backend folder: cd backend
+Install the dependencies: npm install
+Start the backend server: npm run dev
+The backend server will start running on http://localhost:5000.
 
-When the user enters the subgreddiit from here, there are additional links on navbar for users, joined requests, reports and stats pages.
+Note: The MongoDB Atlas connection string is present in the .env file located in the backend folder (/backend/.env). The connection string is commented out for security purposes.
+### Usage
 
-In All subgreddiits, there are sorting options present, and also there is a 'None' option present that removes any kind of sorting on the data.
+1. When you first open the React app, it will navigate to the Login Page by default. If you don't have an account, you can sign up by providing the required information (username, first and last name, email, and password).
+2. After successful login or registration, you will be redirected to the Home Page, which displays links to various locations and a logout button in the top-right corner.
+3. In the "My Sub Greddiits" section, you can create a new sub-greddiit by clicking the "Add New" button in the top-left corner. This section displays the sub-greddiits created and managed by the user.
+4. When you enter a sub-greddiit from the "My Sub Greddiits" section, additional links for Users, Joined Requests, Reports, and Stats pages will be available in the navbar.
+5. The "All Sub Greddiits" section provides sorting options for displaying sub-greddiits. There is also a "None" option that removes any sorting applied to the data.
+6. To make a post in a sub-greddiit, click the "Add New Post" button, type the post content, and click "Submit". Refresh the page to see the new post.
+7. To comment, upvote, or downvote a post, click the respective buttons and refresh the page.
+8. To submit a report, fill in your concern and click "Submit". You will be redirected to the page containing all posts of the sub-greddiit.
+9. The "Users" page displays a list of non-blocked and blocked users. Refresh the page to see any updates.
+10. The "Joining Requests" page lists all joining requests, with options to accept or reject them. Refresh the page to see any updates.
+11. The "Reports" page displays a list of reports, with three options to handle them. Refresh the page after performing any action.
+12. The "Saved Posts" page displays an exact copy of the posts you have saved, with an option to remove them from the saved list. Refresh the page to see any updates.
+13. The "Profile" page allows you to edit certain fields, view your followers and following, and displays all information about the user.
 
-To make a post in the subgreddiit, click on add new post, type post content and then click on submit and refresh. Same with commenting, upvoting, and downvoting.
+Important Note: When entering banned keywords, do not include a comma at the end. For example, enter "test" instead of "test,".
+### Backend Structure
 
-To submit your report, fill your concern and click on submit, you will be redirected to the page having all posts of the subgreddiit.
-
-On Users page, there is a list of non blocked and blocked users, reload required for updation.
-
-On Joining Requests page, there is a list of joining requests, with option to accept or reject, reload required for updation.
-
-On Reports page, there is a list of reports, having the 3 options, reload required for updation after pressing any button.
-
-For Saved Posts, we go to a page where there is the exact copy of the post that has been saved, with an option of removing from it, reload required for updation.
-
-In profile page, we have the option of followers following and also editing certain fields, and also diplaying all information about the user.
-
-All my get/post request in backend are stored in just one file i.e index.js and schemas are stored in /backend/models.
-
-Important:
-
-While entering banned keywords, DO NOT enter a comma in the end. For example, incase of test, it should be "test" and not "test,".
+  All GET and POST requests in the backend are stored in the index.js file.
+  Data schemas are stored in the /backend/models folder.
